@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Akhil P Jacob | Robotics Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0e0e0e;
+    color: #fff;
+}
+
+/* ---------- LAYOUT ---------- */
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ---------- SIDEBAR ---------- */
+
+.sidebar {
+    width: 320px;
+    background: #151515;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #222;
+}
+
+.profile {
+    text-align: center;
+}
+
+/* PROFILE IMAGE */
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto;
+    margin-bottom: 15px;
+    border: 3px solid #fbc531;
+    background: #222;
+}
+
+.profile h2 {
+    margin-bottom: 5px;
+}
+
+.tag {
+    color: #fbc531;
+    font-size: 14px;
+}
+
+/* CONTACT */
+
+.contact {
+    margin-top: 30px;
+}
+
+.contact div {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.contact a {
+    color: #fbc531;
+    text-decoration: none;
+}
+
+/* ---------- EXPERIENCE DROPDOWNS ---------- */
+
+.exp-title {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #fbc531;
+    font-size: 18px;
+}
+
+.exp-box {
+    background: #1c1c1c;
+    padding: 12px 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #222;
+    cursor: pointer;
+}
+
+/* Remove default arrow */
+.exp-box summary {
+    font-weight: 600;
+    color: #fbc531;
+    list-style: none;
+    outline: none;
+}
+
+.exp-box summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Plus / Minus */
+.exp-box summary::after {
+    content: " ➕";
+    float: right;
+}
+
+.exp-box[open] summary::after {
+    content: " ➖";
+}
+
+/* Content */
+.exp-box p {
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ---------- MAIN ---------- */
+
+.main {
+    flex: 1;
+    padding: 50px;
+}
+
+/* NAV */
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #fbc531;
+}
+
+/* SECTION */
+
+section {
+    margin-bottom: 60px;
+}
+
+section h1 {
+    margin-bottom: 15px;
+}
+
+.line {
+    width: 50px;
+    height: 3px;
+    background: #fbc531;
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(251,197,49,0.2);
+}
+
+.card h3 {
+    color: #fbc531;
+    margin-bottom: 10px;
+}
+
+/* SKILLS */
+
+.skills span {
+    display: inline-block;
+    background: #222;
+    padding: 7px 12px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 13px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    color: #777;
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width:100%;
+        border-right:none;
+        border-bottom:1px solid #222;
+    }
+
+    nav{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div>
+
+        <div class="profile">
+
+            <!-- PROFILE IMAGE -->
+            <img src="profilepic.jpg" alt="Akhil Profile" class="avatar">
+
+            <h2>Akhil P Jacob</h2>
+            <p class="tag">Robotics & Software Engineer</p>
+
+        </div>
+
+        <div class="contact">
+
+            <div>📍 Work Permit: Australia & India</div>
+            <div>📧 informakhiljacob@gmail.com</div>
+            <div>📞 +91 9656659490</div>
+            
+
+            <div>
+                🔗 <a href="https://github.com/TechMaverik" target="_blank">GitHub</a>
+            </div>
+
+            <div>
+                🔗 <a href="https://www.linkedin.com/in/akhil-p-jacob-yakub-a00862b1/" target="_blank">LinkedIn</a>
+            </div>
+
+        </div>
+
+        <!-- EXPERIENCE -->
+
+        <h3 class="exp-title">Experience</h3>
+
+        <details class="exp-box">
+            <summary>DPSI </summary>
+            <p>
+                • R&D Head, Senior Lab Incharge for AI & Robotics<br>
+                • Worked with collaborative robots like Unitree Go2, G1, Niryo, ROB<br>
+                • Built robotics middleware called HLEngine3 for collaborative robots.<br>
+                • Built Flight Controller for Cessna 172 Aircraft<br>
+                • Mentor for teachers and students<br>
+                • Familiar with tools like Webots Sim, MC Cloud & MC Lab,<br>
+                • Worked in platforms like Arduinox, ESP32x, RPI Pico, Raspberry Pi 4, Jetson Nano, OpenCV & DataScience Libraries like numpy, pandas etc<br>
+            </p>
+        </details>
+
+        <details class="exp-box">
+            <summary>Brooklet Systems</summary>
+            <p>
+                • Consultant for Software Development Team for Robotics & Aerospace Deparment<br>
+                • Developed FireDyn, a fire spread prediction system based on real time parameter & map for Australian Client<br>
+                • Develped RoAMI , warehouse management system using Robotics & Integrated Systems for US Client<br>
+                • Developed WingAI, a drone based Aircraft & Structural Inspection Systems for US Client<br>
+                • Drone WingMan Security, a fleet management system for drones for US Client<br>
+                • Developed DT, a datamanagement middleware tool for South African Client<br>
+                • Familiar with tools like ArduPilot, Gazebo & Turtlebot3<br>
+            </p>
+        </details>
+
+        <details class="exp-box">
+            <summary>Trenser Engineering </summary>
+            <p>
+                • Senior Software Engineer<br>
+                • Developed an autosorting robot to sort medicines in pharmacy prototype for a Japanese Client<br>
+                • Developed a ROS2 based application to dashboard for an automotive company<br>
+                • Worked on FAST API based server application which uses AWS & Postgres for medical diagnostics<br>
+                • Worked on IoT & Integrations familiar with protocols like BACNet, MODBUS, MQTT<br>
+            </p>
+        </details>
+
+        <details class="exp-box">
+            <summary>Inker Robotics </summary>
+            <p>
+                • Senior Robotics Engineer<br>
+                • Developed Software for Healthcare robots which was deployed duing covid.<br>
+                • Worked with collaborative robots like Dobot, Niryo, Custom arms<br>
+                • Worked on custom robotics and software projects based on requirement<br>
+                • Familiar with tools like EAGLE CAD from Autodesk<br>
+            </p>
+        </details>
+
+        <details class="exp-box">
+            <summary>Network Systems </summary>
+            <p>
+                • Software Engineer & Trainer<br>
+                • Mentor at Kerala Police Academy on Robotics & Intelligent Systems<br>
+                • Worked arduino and raspberry pi based embedded systems<br>
+                • Mentor for project development for final year engineering students<br>
+            </p>
+        </details>
+
+    </div>
+
+</aside>
+
+<!-- MAIN -->
+
+<main class="main">
+
+<!-- NAV -->
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h1>About Me</h1>
+    <div class="line"></div>
+
+    <p>
+        Robotics & Software Engineer with 6+ years experience in robotics and software development.<br>
+        Experienced in developing Python based application development both in Robotics and Software Domains.<br>
+        Experience in working with <b><i>ROS2, Fast API, Flask and Django Frameworks.</i></b><br>
+        Good Communication skills , team builder and a team leader.<br>
+        Good Mentor & Mentor for Kerala Police Academy<br>
+        Like to Travel & Passionate about Aircrafts<br>
+
+    </p>
+
+    <br>
+
+    <p>
+        <h2>Passionate about building intelligent systems for healthcare,
+        surveillance, aerospace, automation, and education.</h2>
+    </p>
+
+</section>
+
+<!-- SERVICES -->
+
+<section>
+
+    <h1>What I Do</h1>
+    <div class="line"></div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Robotics Systems</h3>
+            <p>Development of Autonomous & Collaborative robots and drones using HL Engine, ROS2, SLAM, Gazebo, Webots & Isaac Sim.</p>
+        </div>
+
+        <div class="card">
+            <h3>AI Solutions</h3>
+            <p>Development of Software & its integration with Computer vision & LLM Models.</p>
+        </div>
+
+        <div class="card">
+            <h3>IoT & Embedded Systems</h3>
+            <p>IoT, Microcontrollers, Industrial protocols implementaions like BACNet ,MODBUS ,I2C ,SPI, PCB Designing using AutoDesk Eagle.</p>
+        </div>
+
+        <div class="card">
+            <h3>Mentoring</h3>
+            <p>I am a mentor at the Kerala Police Academy in Robotics and AI. I also mentor passionate students in colleges, schools, and corporate organizations in software development and robotics.</p>
+        </div>
+
+        <div class="card">
+            <h3>Cloud & Backend</h3>
+            <p>AWS, Firebase, APIs, Docker, FastAPI, Flask, Django, SQL</p>
+        </div>
+
+         <div class="card">
+            <h3>Flight Simulator Cockpit Builder</h3>
+            <p>Creates Custom Flight Simulator Panels , Software Interfaces for aircrafts like Airbus A320, Cessna 172.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <h1>Technical Skills</h1>
+    <div class="line"></div>
+
+    <div class="skills">
+
+        <span>Python</span>
+        <span>Embedded C</span>
+        <span>ROS2</span>
+        <span>Gazebo</span>
+        <span>Webots</span>
+        <span>Isaac Sim</span>
+        <span>Flask</span>
+        <span>Fast API</span>
+        <span>OpenCV</span>
+        <span>PyTorch</span>
+        <span>TensorFlow</span>
+        <span>AWS</span>
+        <span>Docker</span>
+        <span>MQTT</span>
+        <span>MODBUS</span>
+        <span>BACnet</span>
+        <span>SLAM</span>
+        <span>Jetson</span>
+        <span>Arduino</span>
+        <span>ESP32</span>
+        <span>Raspberry Pi</span>
+        <span>NVIDIA Jetson</span>
+        <span>Auto Desk EAGLE</span>
+        <span>Tinker Cad Circuits</span>
+        <span>Wokwi Sim</span>
+        <span>Platform IO</span>
+        <span>Linux Based Apllication Development & Deployment</span>
+
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <h1>Key Projects</h1>
+    <div class="line"></div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>HLEngine3</h3>
+            <p>Middleware for collaborative robots and Custom robot integration with different requirements with native and web based interactions.</p>
+        </div>
+
+        <div class="card">
+            <h3>RoAMI</h3>
+            <p>Wholistc WareHouse and Shop managements system using mobile robots and smart devices including security and billing</p>
+        </div>
+
+        <div class="card">
+            <h3>WingMAN</h3>
+            <p>Drone Fleet System. Surveillance and security automation.</p>
+        </div>
+
+        <div class="card">
+            <h3>WingAI</h3>
+            <p>Aircraft inspection solution in the hangar using drones and robots. Report generation</p>
+        </div>
+
+        <div class="card">
+            <h3>Medicine Sorting Robot</h3>
+            <p>Automated pharmacy solution.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <h1>Contact Me</h1>
+    <div class="line"></div>
+
+    <p>Email: informakhiljacob@gmail.com</p>
+    <p>Phone: +91 9656659490</p>
+    <p>GitHub: github.com/TechMaverik</p>
+
+</section>
+
+<footer>
+    © 2026 Akhil P Jacob | Robotics & Software Development Portfolio
+</footer>
+
+</main>
+
+</div>
+
+</body>
+</html>
