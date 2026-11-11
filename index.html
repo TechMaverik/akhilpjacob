@@ -463,6 +463,8 @@ h2 {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     padding: 32px;
     border-right: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
@@ -489,6 +491,47 @@ h2 {
 .card p {
     font-size: 17px;
     line-height: 1.55;
+    margin-bottom: 22px;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Media boxes: every photo, video and embed is the same square,
+   pinned to the bottom of its card so they line up across a row */
+
+.card-photo,
+.card .embed,
+.card .video {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    margin-top: auto;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid var(--line);
+}
+
+.card-photo img,
+.card .embed iframe,
+.card .video iframe {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.card-photo img {
+    object-fit: cover;
+    object-position: 50% 10%;
+    filter: grayscale(1);
+    transition: filter .7s;
+}
+
+.card:hover .card-photo img {
+    filter: grayscale(0);
 }
 
 /* EXPERIENCE */
@@ -738,7 +781,7 @@ footer .wrap {
 <header id="site-nav">
     <div class="wrap bar">
 
-        <a href="#top" class="brand" aria-label="Akhil P Jacob, home">APJ <span>//</span> Akhil P Jacob</a>
+        <a href="#top" class="brand" aria-label="Akhil P Jacob, home">Er. Akhil Puthupparampil Jacob</a>
 
         <nav>
             <a href="#about">About</a>
@@ -768,12 +811,12 @@ footer .wrap {
 
         <div class="hero-copy">
 
-            <div class="kicker">Robotics &amp; Software Engineer · Australia &amp; India</div>
+            <div class="kicker">AI,Robotics &amp; Software Engineer · Australia &amp; India</div>
 
             <h1>Akhil P <em>Jacob.</em></h1>
 
             <p class="hero-sub">
-                Robotics &amp; Software Engineer with 6+ years experience in robotics and software development.
+                AI , Robotics &amp; Software Engineer with 6+ years experience in robotics and software development.
             </p>
 
             <div class="hero-cta">
@@ -784,7 +827,7 @@ footer .wrap {
 
             <div class="specs">
                 <div>
-                    <div class="label">Work Permit</div>
+                    <div class="label">Locations</div>
                     <div class="value">Australia &amp; India</div>
                 </div>
                 <div>
@@ -810,7 +853,7 @@ footer .wrap {
             </div>
             <div class="photo-caption">
                 <span class="label">Akhil P Jacob</span>
-                <span class="label">Robotics &amp; Software Engineer</span>
+                <span class="label">AI, Robotics &amp; Software Engineer</span>
             </div>
         </div>
 
@@ -840,8 +883,8 @@ footer .wrap {
             <h2>About <em>Me.</em></h2>
 
             <ul class="about-list">
-                <li>Robotics &amp; Software Engineer with 6+ years experience in robotics and software development.</li>
-                <li>Experienced in developing Python based application development both in Robotics and Software Domains.</li>
+                <li>AI, Robotics &amp; Software Engineer with 6+ years experience in robotics and software development.</li>
+                <li>Experienced in developing Python based application development.</li>
                 <li>Experience in working with <b><i>ROS2, Fast API, Flask and Django Frameworks.</i></b></li>
                 <li>Good Communication skills , team builder and a team leader.</li>
                 <li>Good Mentor &amp; Mentor for Kerala Police Academy</li>
@@ -884,36 +927,54 @@ footer .wrap {
                 <span class="label">01</span>
                 <h3>Robotics Systems</h3>
                 <p>Development of Autonomous & Collaborative robots and drones using HL Engine, ROS2, SLAM, Gazebo, Webots & Isaac Sim.</p>
+                <div class="card-photo">
+                    <img src="unitree-robotics.jpg" alt="Akhil with Unitree Go2 quadruped and G1 humanoid robots" loading="lazy" width="1152" height="1536">
+                </div>
             </div>
 
             <div class="card">
                 <span class="label">02</span>
                 <h3>AI Solutions</h3>
                 <p>Development of Software & its integration with Computer vision & LLM Models.</p>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/HxkfLQgyt0M" title="We Inspected This Roof From the Air — No Ladder | SpatioFos" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
 
             <div class="card">
                 <span class="label">03</span>
                 <h3>IoT & Embedded Systems</h3>
                 <p>IoT, Microcontrollers, Industrial protocols implementaions like BACNet ,MODBUS ,I2C ,SPI, PCB Designing using AutoDesk Eagle.</p>
+                <div class="embed">
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7326950450073587712?compact=1" height="399" width="504" loading="lazy" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                </div>
             </div>
 
             <div class="card">
                 <span class="label">04</span>
                 <h3>Mentoring</h3>
                 <p>I am a mentor at the Kerala Police Academy in Robotics and AI. I also mentor passionate students in colleges, schools, and corporate organizations in software development and robotics.</p>
+                <div class="card-photo">
+                    <img src="police.jpg" alt="Akhil with Kerala Police Academy officers after a training session" loading="lazy" width="1080" height="606" style="object-position: 30% 50%;">
+                </div>
             </div>
 
             <div class="card">
                 <span class="label">05</span>
                 <h3>Cloud & Backend</h3>
                 <p>AWS, Firebase, APIs, Docker, FastAPI, Flask, Django, SQL</p>
+                <div class="embed">
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7526246196898648064?compact=1" height="399" width="504" loading="lazy" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                </div>
             </div>
 
             <div class="card">
                 <span class="label">06</span>
                 <h3>Flight Simulator Cockpit Builder</h3>
-                <p>Creates Custom Flight Simulator Panels , Software Interfaces for aircrafts like Airbus A320, Cessna 172.</p>
+                <p>Creates Custom Flight Simulator Panels , Software Interfaces for aircrafts like Airbus A320, Cessna 152, 172.</p>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/mcrFTMmvbk8" title="From Idea to Cockpit in 7 Days | Building the JAC Pilatus PC-6 Flight Simulator |  LabRatz 26 | DPSI" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
 
         </div>
@@ -939,10 +1000,12 @@ footer .wrap {
             <details class="exp-box" open>
                 <summary><span class="label">01</span><h3>SpatioFos- Australia</h3></summary>
                 <ul>
-                    <li>Co-Founder and Software Architect, Spatiofos. Lead architect of CEREBRATION, an asset intelligence platform for real-time inspection data analysis and visualisation.</li>
+                    <li>Co-Founder and Software Architect, Spatiofos. Lead architect of CEREBRATION, an asset intelligence platform for real-time inspection data analysis and visualisation of various industrial and government assets.</li>
                     <li>AU/NZ inspection compliance. Built inspection workflows mapped to AS 4349.1, AS/NZS 3500.3, AS 1562.1, AS/NZS 4389 and related standards.</li>
                     <li>Thermal and colour image processing. Developed computer-vision pipelines that detect and classify asset defects from thermal and RGB imagery.</li>
                     <li>Drone and mapping integration. Integrated OpenDroneMap (ODM) photogrammetry and DJI drone SDKs for automated capture, orthomosaic and 3D model generation.</li>
+                    <li>Inspection reporting and analytics. Created comprehensive reporting tools to analyse inspection data and provide actionable insights.</li>
+                    <li>Assets include Rooftops, Bridges,Industrial Facilities, Vehicles, Aircrafts, Wildlife and many more</li>
                 </ul>
             </details>
 
@@ -1082,36 +1145,44 @@ footer .wrap {
 
         <h2>Key <em>Projects.</em></h2>
 
+        
+
         <div class="cards">
 
             <div class="card">
                 <span class="label">01</span>
-                <h3>HLEngine3</h3>
-                <p>Middleware for collaborative robots and Custom robot integration with different requirements with native and web based interactions.</p>
+                <h3>Cerebration</h3>
+                <p>An asset intelligence platform for real-time inspection data analysis and visualisation of various industrial and government assets.</p>
             </div>
 
             <div class="card">
                 <span class="label">02</span>
-                <h3>RoAMI</h3>
-                <p>Wholistc WareHouse and Shop managements system using mobile robots and smart devices including security and billing</p>
+                <h3>StoneWorks</h3>
+                <p>AI integrated quoting platform for the stone and fabrication industry along with interdepartmental workflow integration.</p>
             </div>
 
             <div class="card">
                 <span class="label">03</span>
-                <h3>WingMAN</h3>
-                <p>Drone Fleet System. Surveillance and security automation.</p>
+                <h3>HLEngine</h3>
+                <p>Middleware for collaborative robots and Custom robot integration with different requirements with native and web based interactions.</p>
             </div>
 
             <div class="card">
                 <span class="label">04</span>
-                <h3>WingAI</h3>
-                <p>Aircraft inspection solution in the hangar using drones and robots. Report generation</p>
+                <h3>Roami</h3>
+                <p>Wholistc WareHouse and Shop managements system using mobile robots and smart devices including security and billing</p>
             </div>
 
             <div class="card">
                 <span class="label">05</span>
-                <h3>Medicine Sorting Robot</h3>
-                <p>Automated pharmacy solution.</p>
+                <h3>Wingman</h3>
+                <p>Drone Fleet System. Surveillance and security automation.</p>
+            </div>          
+
+            <div class="card">
+                <span class="label">06</span>
+                <h3>ROB</h3>
+                <p>Warehouse management and automation solution.</p>
             </div>
 
         </div>
