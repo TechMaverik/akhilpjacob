@@ -514,7 +514,8 @@ h2 {
 
 .card-photo img,
 .card .embed iframe,
-.card .video iframe {
+.card .video iframe,
+.card .video video {
     position: absolute;
     inset: 0;
     display: block;
@@ -533,6 +534,11 @@ h2 {
 .card:hover .card-photo img {
     filter: grayscale(0);
 }
+
+.card .video video {
+    object-fit: contain;
+}
+
 
 /* EXPERIENCE */
 
@@ -945,8 +951,8 @@ footer .wrap {
                 <span class="label">03</span>
                 <h3>IoT & Embedded Systems</h3>
                 <p>IoT, Microcontrollers, Industrial protocols implementaions like BACNet ,MODBUS ,I2C ,SPI, PCB Designing using AutoDesk Eagle.</p>
-                <div class="embed">
-                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7326950450073587712?compact=1" height="399" width="504" loading="lazy" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                <div class="video">
+                    <video src="unitree-go2-hlengine.mp4" poster="unitree-go2-hlengine.jpg" controls playsinline preload="none" aria-label="Unitree Go2 robot integrates MC 4.0 and HL Engine 3"></video>
                 </div>
             </div>
 
@@ -963,8 +969,8 @@ footer .wrap {
                 <span class="label">05</span>
                 <h3>Cloud & Backend</h3>
                 <p>AWS, Firebase, APIs, Docker, FastAPI, Flask, Django, SQL</p>
-                <div class="embed">
-                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7526246196898648064?compact=1" height="399" width="504" loading="lazy" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                <div class="video">
+                    <video src="spatiofos-inspection.mp4" poster="spatiofos-inspection.jpg" controls playsinline preload="none" aria-label="Spatiofos AI asset inspection"></video>
                 </div>
             </div>
 
